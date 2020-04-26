@@ -1,8 +1,8 @@
 {
   "name": "TAC_Server",
-"author": "Yevhen Shmatko <yevhen.shmatko@gmail.com>",
+  "author": "Yevhen Shmatko <yevhen.shmatko@gmail.com>",
   "license": "MIT",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Server",
   "keywords": [
     "Node.js",
