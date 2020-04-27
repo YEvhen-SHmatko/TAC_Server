@@ -20,9 +20,10 @@ const userSchema = new Schema({
     required: true,
     unique: true,
   },
-  favoriteProducts: Array,
-  viewedProducts: Array,
-  orders: Array,
+  confirmEmail: {
+    type: Boolean,
+    default: false,
+  },
 });
 
 userSchema.plugin(timestamp);
