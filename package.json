@@ -1,8 +1,8 @@
 {
   "name": "TAC_Server",
-"author": "Yevhen Shmatko <yevhen.shmatko@gmail.com>",
+  "author": "Yevhen Shmatko <yevhen.shmatko@gmail.com>",
   "license": "MIT",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "Server",
   "keywords": [
     "Node.js",
@@ -24,12 +24,14 @@
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "body-parser": "^1.19.0",
+    "emailjs": "^2.2.0",
     "express": "^4.17.1",
     "googleapis": "^49.0.0",
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^5.9.6",
     "morgan": "^1.9.1",
     "multer": "^1.4.2",
+    "nodemailer": "^6.4.6",
     "nodemon": "^1.18.4",
     "shortid": "^2.2.15"
   }
