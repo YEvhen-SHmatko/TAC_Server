@@ -1,6 +1,6 @@
 const dbUser = "yshmatko";
 const dbPassword = "Z1dgmy0kd1";
-const URL = "http://localhost:3001";
+const URL = "http://localhost:3000";
 const config = {
   port: 3001,
   dbUser,
