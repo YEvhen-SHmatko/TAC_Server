@@ -14,14 +14,19 @@ const startServer = async (port) => {
     .use(bodyParser.urlencoded({ extended: false }))
     .use(bodyParser.json())
     .use(morgan("dev"))
-    .use(function (req, res, next) {
-      res.header("Access-Control-Allow-Origin", "*");
-      res.header("Access-Control-Allow-Headers", "*");
-      next();
-    })
-    .use("/", authRouter)
-    .use(verifyToken)
-    .use("/", router)
+    .use(
+      "/",
+      function (req, res, next) {
+        const header = req.headers.authorization;
+        console.log("header", header);
+        res.header("Access-Control-Allow-Origin", "*");
+        res.header("Access-Control-Allow-Headers", "*");
+        next();
+      },
+      authRouter,
+      verifyToken,
+      router
+    )
     .use("*", errorHandler);
 
   const server = app.listen(port, () => {
