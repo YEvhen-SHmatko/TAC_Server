@@ -2,7 +2,7 @@ const dbUser = "yshmatko";
 const dbPassword = "Z1dgmy0kd1";
 const URL = "http://localhost:3000";
 const config = {
-  port: 3001,
+  port: process.env.PORT || 3001,
   dbUser,
   databaseUrl: `mongodb+srv://${dbUser}:${dbPassword}@cluster0-iwbez.mongodb.net/time-analytic-control`,
   secret: "secret-key",

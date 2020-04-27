@@ -24,9 +24,11 @@ const startServer = async (port) => {
     .use("/", router)
     .use("*", errorHandler);
 
-  app.listen(port);
-
-  console.log("Server was started at http://localhost:" + port);
+  const server = app.listen(port, () => {
+    console.log(
+      "Server was started at http://localhost:" + server.address().port
+    );
+  });
 };
 
 module.exports = startServer;
